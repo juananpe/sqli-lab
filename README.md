@@ -24,9 +24,13 @@ Wait a minute before trying to connect to  http://localhost:8888 (otherwise, you
 
 
 ### How to stop the lab?
+If you want to stop your containers without removing them from docker:
 ```
 $ docker compose down
 ```
-
+If you want to stop your containers and remove them from docker:
+```
+docker-compose rm -fsv
+```
 
 
