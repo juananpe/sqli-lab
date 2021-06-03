@@ -27,7 +27,6 @@ fclose($fp);
 
 
 $sql="SELECT * FROM users WHERE id='$id' LIMIT 0,1";
-print_r($sql);
 $result=mysql_query($sql);
 $row = mysql_fetch_array($result);
 
