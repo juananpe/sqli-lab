@@ -1,0 +1,43 @@
+version: "3"
+
+services:
+
+  mariadb:
+    restart: unless-stopped
+    image: mariadb:latest
+    ports:
+    # Database port will be open only on localhost for security 
+    - 127.0.0.1:3308:3306
+    volumes:
+    # Path to folder of local filesystem with database files
+    - ./database/mariadb:/var/lib/mysql
+    - ./dump:/docker-entrypoint-initdb.d
+    environment:
+    # Parameters which will be used in application
+    - MYSQL_ROOT_PASSWORD=euiti2019
+    - MYSQL_ROOT_HOST=%
+    - MYSQL_DATABASE=security
+    - MYSQL_USER=euiti
+    - MYSQL_PASSWORD=euiti2019
+
+  application:
+    image: juananpe/php-mysql:5.6-apache
+    environment:
+    # Database parameters of app
+    - DB_HOST=mariadb
+    - DB_NAME=security
+    - DB_USER=euiti
+    - DB_PASS=euiti2019
+    # Settings of php.ini
+    - PHP_SHORT_OPEN_TAG=On
+    - PHP_ERROR_REPORTING=E_ALL
+    - PHP_DISPLAY_ERRORS=On
+    - PHP_HTML_ERRORS=On
+    - PHP_XDEBUG_ENABLED=true
+    volumes:
+    # Folder in which will be "public" folder with index.php
+    # and other sources of application
+    - ./html:/app
+    ports:
+    - 8888:80
+

