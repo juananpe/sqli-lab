@@ -17,16 +17,20 @@ Note: the database volume will be stored in ./database
 login, pass and db name are hardcoded in `docker-compose.yml` and `html/public/includes/config.inc`. To start the lab, just run:
 
 ```
-$ docker-compose up --rm -d
+$ docker-compose up -d
 ```
 
 Wait a minute before trying to connect to  http://localhost:8888 (otherwise, you will get "Connection refused" errors from MariaDB/MySQL)
 
 
 ### How to stop the lab?
+If you want to stop your containers without removing them from docker:
 ```
 $ docker compose down
 ```
-
+If you want to stop your containers and remove them from docker:
+```
+docker-compose rm -fsv
+```
 
 
